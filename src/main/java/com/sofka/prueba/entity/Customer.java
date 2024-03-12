@@ -1,4 +1,4 @@
-package com.sofka.prueba.entities;
+package com.sofka.prueba.entity;
 
 import jakarta.persistence.Entity;
 import lombok.Data;

@@ -1,6 +1,6 @@
-package com.sofka.prueba.services;
+package com.sofka.prueba.service;
 
-import com.sofka.prueba.entities.Customer;
+import com.sofka.prueba.entity.Customer;
 import com.sofka.prueba.repository.CustomerRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -10,7 +10,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)

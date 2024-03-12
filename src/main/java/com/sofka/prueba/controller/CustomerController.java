@@ -1,7 +1,7 @@
 package com.sofka.prueba.controller;
 
-import com.sofka.prueba.entities.Customer;
-import com.sofka.prueba.services.CustomerService;
+import com.sofka.prueba.entity.Customer;
+import com.sofka.prueba.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

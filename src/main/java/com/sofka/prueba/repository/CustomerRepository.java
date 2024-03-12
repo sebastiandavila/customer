@@ -1,6 +1,6 @@
 package com.sofka.prueba.repository;
 
-import com.sofka.prueba.entities.Customer;
+import com.sofka.prueba.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,9 +1,10 @@
-package com.sofka.prueba.services;
+package com.sofka.prueba.service;
 
-import com.sofka.prueba.entities.Customer;
+import com.sofka.prueba.entity.Customer;
 import com.sofka.prueba.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -26,9 +27,10 @@ public class CustomerService {
         return customerRepository.findById(id).orElse(null);
     }
 
+    @Transactional
     public Customer updateCustomer(Long id, Customer updatedCustomer) {
         Customer existingCustomer = customerRepository.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("Customer not found with id: " + id));
+                .orElseThrow(() -> new NoSuchElementException("El cliente no se encontró con el ID especificado: " + id));
 
         existingCustomer.setName(updatedCustomer.getName());
         existingCustomer.setAge(updatedCustomer.getAge());
