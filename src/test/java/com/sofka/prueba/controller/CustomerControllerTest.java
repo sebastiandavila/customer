@@ -37,7 +37,7 @@ import static org.mockito.Mockito.when;
         Long customerId = 1L;
         Customer customer = new Customer();
         customer.setId(customerId);
-        customer.setName("John Doe");
+        customer.setName("Sebastian");
 
         when(customerRepository.getReferenceById(customerId)).thenReturn(customer);
 
@@ -46,7 +46,7 @@ import static org.mockito.Mockito.when;
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(customerId))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("John Doe"));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("Jose Lema"));
     }
 
 }
